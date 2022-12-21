@@ -8,14 +8,12 @@ const CartItem = ({ name, quantity, total, price, id }) => {
     dispatch(cartActions.removeFromCart(id));
   };
   const addHandler = () => {
-    dispatch(
-      cartActions.addToCart({
-        id,
-        name,
-        price,
-      })
-    );
-  };
+    dispatch(cartActions.addtoCart({
+      name,
+      price,
+      id
+    }))
+  }
   return (
     <div className="cartItem">
       <h2>{name}</h2>
